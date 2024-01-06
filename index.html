@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="image/png" sizes="25x25" rel="icon" href="favicon.png">
+    <title>list of students</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+</head>
+
+<body>
+
+    <div class="container pt-7 pb-4">
+        <h1 class="h1"> Список студентов</h1>
+
+        <form action="#" class="mb-4" id="add-form">
+
+            <div class="mb-3">
+                <div class="mistake invisible" id="name-mistake">Вы не ввели имя</div>
+                <input class="form-control" type="text" id="name-inp" placeholder="Имя">
+            </div>
+            <div class="mb-3">
+                <div class="mistake invisible" id="lastname-mistake">Вы не ввели фамилию</div>
+                <input class="form-control" type="text" id="lastname-inp" placeholder="Фамилия">
+            </div>
+            <div class="mb-3">
+                <div class="mistake invisible" id="surname-mistake"> Вы не ввели отчесвто</div>
+                <input class="form-control" type="text" id="surname-inp" placeholder="Отчество">
+            </div>
+            <div class="mb-3">
+                <div class="mistake invisible" id="birthday-mistake">Дата рождения в диапазоне от 01.01.1900 до текущей
+                </div>
+                <input class="form-control" type="date" id="birthday-inp">
+            </div>
+            <div class="mb-3">
+                <div class="mistake invisible" id="studyStart-mistake">Год начала обучения - в диапазоне от 2000-го до
+                    текущего года</div>
+                <input class="form-control" type="number" id="studyStart-inp" placeholder="Год начала обучения">
+            </div>
+            <div class="mb-3">
+                <div class="mistake invisible" id="faculty-mistake">Вы не ввели факультет</div>
+                <input class="form-control" type="text" id="faculty-inp" placeholder="Факультет">
+            </div>
+
+            <button type="submit" class="btn btn-success">Добавить студента</button>
+        </form>
+
+
+        <form action="#" id="filter-form" class="mb-3">
+            <h2>Фильтрация</h2>
+            <input id="filter-form__fio-inp" class="form-control mb-3" type="text" placeholder="ФИО">
+            <input id="filter-form__faculty-inp" class="form-control mb-3" type="text" placeholder="Факультет">
+            <input id="filter-form__start-inp" class="form-control mb-3" type="text" placeholder="Год начала обучения">
+            <input id="filter-form__startEnd-inp" class="form-control mb-3" type="text"
+                placeholder="Год окончания обучения">
+        </form>
+
+        <table class="table table-success">
+            <thead>
+                <tr>
+                    <th class="btn-filter" id="sort__fio">ФИО</th>
+                    <th class="btn-filter" id="sort__faculty">Факультет</th>
+                    <th class="btn-filter" id="sort__age">Дата рождения</th>
+                    <th class="btn-filter" id="sort__start">Год обучения и № курса</th>
+                </tr>
+            </thead>
+            <tbody id="stud-table">
+
+            </tbody>
+        </table>
+    </div>
+
+
+</body>
+
+</html>
